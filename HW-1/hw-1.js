@@ -2,7 +2,6 @@ const applePrice = 15.678;
 const orangePrice = 123.965;
 const bananaPrice = 90.2345;
 
-
 const maxPrice = Math.max(applePrice, orangePrice, bananaPrice);
 const minPrice = Math.min(applePrice, orangePrice, bananaPrice);
 const sumPrice = applePrice + orangePrice + bananaPrice; 
