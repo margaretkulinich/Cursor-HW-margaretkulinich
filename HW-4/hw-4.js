@@ -9,12 +9,12 @@ function getPairs(students) {
     const result = [];
 
     for (let i = 0; i < students.length; i++) {
-        let arrItem = students[i];
+        let student = students[i];
 
-        if (arrItem.endsWith('а')) {
-            arrFemale.push(arrItem);
+        if (student.endsWith('а')) {
+            arrFemale.push(student);
         } else {
-            arrMale.push(arrItem);
+            arrMale.push(student);
         }
     }
 
@@ -50,15 +50,15 @@ function getMarks() {
 // const getMarks = (students, marks) => students.map((student, i) => [student, marks[i]]);
 
 
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
 // 4 
 function getPairsWithRandomMarks(pairsWithThemes) {
     const minMark = 1;
     const maxMark = 5;
     const pairsWithRandomMarks = [... pairsWithThemes];
 
-    pairsWithThemes.forEach(element =>
-        element.push(Math.floor(Math.random() * (maxMark - minMark + 1)) + minMark)
-    );
+    pairsWithThemes.forEach(element => element.push(getRandomNumber(minMark, maxMark)));
     
     return pairsWithRandomMarks;
 }
