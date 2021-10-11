@@ -129,4 +129,4 @@ function calculateWordLetters(word) {
 }
 
 
-console.log('Функція 6:', calculateWordLetters("Ввест"));
+console.log('Функція 6:', calculateWordLetters("тест"));
