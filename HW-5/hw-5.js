@@ -3,18 +3,17 @@ const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)
 // 1 Створіть функцію getRandomArray(length, min, max) – яка повертає масив випадкових цілих чисел.
  function getRandomArray(length, min, max) {
     const randomNumbersArray = [];
-
     if (min > max) {
         console.error("min cannot be over max!");
 
         return;
-    } else {
-        for (i = 0; i < length; i++) {
-            randomNumbersArray.push(getRandomNumber(min, max));
-        }
-
-        return randomNumbersArray;
     }
+
+    for (i = 0; i < length; i++) {
+        randomNumbersArray.push(getRandomNumber(min, max));
+    }
+
+    return randomNumbersArray;
 }
 
 console.log(getRandomArray(15, 1, 100));
@@ -131,7 +130,8 @@ function replaceBadWords(string) {
     let newStr = string;
 
     for (let i = 0; i < badWords.length; i++) {
-		newStr = newStr.split(badWords[i]).join('****');
+        const newValueBadWord = '*'.repeat(badWords[i].length);
+		newStr = newStr.split(badWords[i]).join(newValueBadWord);
 	}
 
     return newStr;
