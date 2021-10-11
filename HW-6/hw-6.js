@@ -128,5 +128,4 @@ function calculateWordLetters(word) {
   return result;
 }
 
-
 console.log('Функція 6:', calculateWordLetters("тест"));
