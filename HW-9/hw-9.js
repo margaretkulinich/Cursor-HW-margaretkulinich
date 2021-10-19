@@ -49,7 +49,7 @@ console.log(`Cереднє арифметичне з новою оцінкою: 
 class BudgetStudent extends Student {
     constructor(university, course, fullName)  {
         super(university, course, fullName);
-        setInterval(() => this.getScholarship(), 10000);
+        setInterval(() => this.getScholarship(), 30000);
     }
 
     getScholarship() {
