@@ -16,7 +16,11 @@ class Student {
     }
 
     set marksInfo(mark) {
-         this.marks.push(mark);
+        if (!this._isDismissed) {
+            this.marks.push(mark);
+        } else {
+            this.marks = null;
+        }
     }
 
     getAverageMark() {
