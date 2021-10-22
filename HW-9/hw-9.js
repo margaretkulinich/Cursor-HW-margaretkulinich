@@ -3,7 +3,7 @@ class Student {
         this.university = university,
         this.course = course,
         this.fullName = fullName,
-        this.marks = [5, 4, 4, 5],
+        this._marks = [5, 4, 4, 5],
         this._isDismissed = false
     }
 
@@ -11,24 +11,24 @@ class Student {
         return `Студент ${this.course}го курсу ${this.university}, ${this.fullName}`;
     }
 
-    get marksInfo() {
-        return !this._isDismissed ? this.marks : null;
+    get marks() {
+        return !this._isDismissed ? this._marks : null;
     }
 
-    set marksInfo(mark) {
+    set marks(mark) {
         if (!this._isDismissed) {
-            this.marks.push(mark);
+            this._marks.push(mark);
         } else {
-            this.marks = null;
+            this._marks = null;
         }
     }
 
     getAverageMark() {
-        if (this.marks === null) {
+        if (this._marks === null) {
             return 0;
         }
 
-        return this.marks.reduce((sum, item) => sum + item) / this.marks.length;
+        return this._marks.reduce((sum, item) => sum + item) / this._marks.length;
     }
 
     dismiss() {
@@ -46,7 +46,7 @@ console.log(ostap.getInfo());
 console.log(`Cереднє арифметичне: ${ostap.getAverageMark()}`);
 
 // ставлю оцінку
-ostap.marksInfo = 5;
+ostap.marks = 5;
 console.log(`Cереднє арифметичне з новою оцінкою: ${ostap.getAverageMark()}`); 
 
 
