@@ -1,0 +1,14 @@
+.outerSquare {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.rowContainer {
+    display: flex;
+    background-color: blueviolet;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+}
