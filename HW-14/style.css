@@ -1,0 +1,54 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    background: white url(background.jpg) no-repeat fixed;
+    color: white;
+}
+
+#getAllCharacters, #getAllPlanets {
+    display: inline-block;	
+	box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 0 20px;
+	margin: 0 15px 15px 30px;
+	outline: none;
+	height: 40px;
+	line-height: 40px;
+	font-size: 17px;
+	font-weight: 600;
+	color: black;
+	background-color: chartreuse;
+	cursor: pointer;
+}
+
+#getAllCharacters:disabled {
+    cursor: default;
+    opacity: 0.4;
+}
+
+#moviesItemsBox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.character {
+    border: 3px solid grey;
+    box-shadow: 10px 5px 10px 2px black;
+    width: 250px;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    text-shadow: 5px 2px 4px black;
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: 27px;
+    color: chartreuse;
+}
+
+.moviePart {
+    color: white;
+    margin: 30px;
+}
